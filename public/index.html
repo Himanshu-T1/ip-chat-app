@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Chat - Anonymous Local Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="chat-header">
+            <div class="brand">
+                <h1>IPCHAT</h1>
+                <span class="status-badge">LIVE</span>
+            </div>
+            <div class="ip-info-box">
+                <div>IP: <span id="user-ip">Detecting...</span></div>
+                <div class="active-count">Online in IP Room: <strong id="online-users">1</strong></div>
+            </div>
+        </header>
+
+        <div class="user-bar">
+            <label for="username-input">Your Handle:</label>
+            <input type="text" id="username-input" maxlength="20" placeholder="Set nickname...">
+            <button id="save-username-btn">Update</button>
+        </div>
+
+        <div id="chat-messages" class="chat-messages">
+            <div class="system-msg">Connecting to your IP network room...</div>
+        </div>
+
+        <form id="chat-form" class="chat-form">
+            <input type="text" id="message-input" placeholder="Type a message to your IP group..." autocomplete="off" required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
 
