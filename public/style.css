@@ -1,1 +1,184 @@
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-wrapper {
+    width: 100%;
+    max-width: 650px;
+    height: 95vh;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.chat-header {
+    background: #252526;
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand h1 {
+    font-size: 1.4rem;
+    color: #007acc;
+    letter-spacing: 1px;
+}
+
+.status-badge {
+    background: #4caf50;
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.ip-info-box {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+#user-ip {
+    color: #4ec9b0;
+    font-weight: bold;
+}
+
+.user-bar {
+    background: #2d2d2d;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #333;
+    font-size: 0.85rem;
+}
+
+.user-bar input {
+    background: #1e1e1e;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.user-bar button {
+    background: #3c3c3c;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-bar button:hover {
+    background: #505050;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #181818;
+}
+
+.msg-item {
+    background: #252526;
+    padding: 8px 12px;
+    border-radius: 6px;
+    max-width: 85%;
+    align-self: flex-start;
+    border-left: 3px solid #007acc;
+}
+
+.msg-item.my-msg {
+    align-self: flex-end;
+    background: #004b78;
+    border-left: none;
+    border-right: 3px solid #4ec9b0;
+}
+
+.msg-meta {
+    font-size: 0.72rem;
+    color: #888;
+    margin-bottom: 3px;
+    display: flex;
+    gap: 8px;
+}
+
+.msg-item.my-msg .msg-meta {
+    color: #ccc;
+}
+
+.msg-text {
+    font-size: 0.92rem;
+    word-break: break-word;
+}
+
+.system-msg {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #777;
+    margin: 4px 0;
+    font-style: italic;
+}
+
+.chat-form {
+    display: flex;
+    padding: 12px;
+    background: #252526;
+    border-top: 1px solid #333;
+    gap: 10px;
+}
+
+.chat-form input {
+    flex: 1;
+    background: #1e1e1e;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.chat-form button {
+    background: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.chat-form button:hover {
+    background: #005999;
+}
